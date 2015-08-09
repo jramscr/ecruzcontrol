@@ -12,12 +12,12 @@ $(document).ready(function(){
     }
   }
 
-  function validatePhoneLenght(txtPhone) {
-    var value = $(txtPhone).val()
-    if (value.lenght == 8)
-      return true
-    else
-      return false
+  function openModal(){
+    $('#myModal').modal({ show: true });
+  }
+
+  function closeModal(){
+    $('#myModal').modal({ show: false });
   }
 
   $('#services_request_phone').blur(function(e) {
@@ -29,5 +29,12 @@ $(document).ready(function(){
     }
   });
 
+  $('.submit-services-request').click(function(){
+    openModal();
+
+    $('#new_services_request').find('input.form-control').each(function(index, value){
+      $(value).val('');
+    });
+  });
 
 })
