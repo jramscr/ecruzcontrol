@@ -13,6 +13,7 @@ $(document).ready(function(){
   }
 
   function openModal(){
+    $('#myModal').removeClass('hide');
     $('#myModal').modal({ show: true });
   }
 
@@ -35,6 +36,11 @@ $(document).ready(function(){
     $('#new_services_request').find('input.form-control').each(function(index, value){
       $(value).val('');
     });
+
+    $('#new_services_request').find('textarea.form-control').each(function(index, value){
+      $(value).val('');
+    });
+
   });
 
 })
