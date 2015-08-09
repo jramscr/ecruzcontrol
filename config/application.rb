@@ -25,5 +25,8 @@ module Ecruzcontrol
 
     # Prevent initializing your application and connecting to the database
     config.assets.initialize_on_precompile = false
+
+    # Configure that notifies statics assets for the application
+    config.serve_static_assets = true
   end
 end
