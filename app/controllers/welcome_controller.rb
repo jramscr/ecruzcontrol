@@ -1,3 +1,5 @@
 class WelcomeController < ApplicationController
-  def home; end
+  def home
+    @services_request = ServicesRequest.new
+  end
 end

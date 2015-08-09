@@ -1,2 +1,2 @@
-module SubscriptionsHelper
+module ServicesRequestsHelper
 end
