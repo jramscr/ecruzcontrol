@@ -27,6 +27,6 @@ module Ecruzcontrol
     config.assets.initialize_on_precompile = false
 
     # Configure that notifies statics assets for the application
-    config.serve_static_files = true
+    config.serve_static_files = false
   end
 end
