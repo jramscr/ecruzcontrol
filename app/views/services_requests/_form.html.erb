@@ -2,14 +2,17 @@
   <%= f.error_notification %>
 
   <div class="form-inputs">
-    <%= f.input :name, label: false, placeholder: 'Nombre' %>
+    <%= f.input :name, label: false, placeholder: '* Nombre' %>
     <%= f.input :lastname, label: false, placeholder: 'Apellido'  %>
-    <%= f.input :phone, label: false, placeholder: 'Teléfono'  %>
+    <%= f.input :phone, label: false, placeholder: '* Teléfono'  %>
     <%= f.input :email, type: :email, label: false, placeholder: 'Correo'  %>
-    <%= f.input :details, type: :text, label: false, placeholder: 'Algún detalle que nos quieras decir'  %>
+    <%= f.input :details, type: :text, label: false, placeholder: '* Escribe el servicio que deseas recibir o solicita una cotización' %>
   </div>
 
   <div class="form-actions">
     <%= f.button :submit , "Solicitar servicios", class: 'submit-services-request pull-right' %>
   </div>
 <% end %>
+
+<br>
+<p><small>Los campos con (*) son requeridos</small></p>
