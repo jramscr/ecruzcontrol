@@ -1,0 +1,5 @@
+// confirm file called
+console.log("create.js.erb file");
+
+// Clean inputs in the form
+$('#services-form').html(<%= escape_javascript(render partial: 'services_requests/form', locals: { boolean: true }) %>)

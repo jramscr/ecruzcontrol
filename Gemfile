@@ -19,3 +19,7 @@ group :development, :test do
   gem 'web-console', '~> 2.0'
   gem 'spring'
 end
+
+group :production, :environment  do
+  gem 'rails_12factor'
+end
