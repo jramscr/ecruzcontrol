@@ -1,5 +1,4 @@
 class ServicesRequestsController < ApplicationController
-  before_action :set_services_request, only: [:show, :edit, :update, :destroy]
 
   def new
     @services_request = ServicesRequest.new
@@ -10,8 +9,9 @@ class ServicesRequestsController < ApplicationController
 
     respond_to do |format|
       if @services_request.save
-        format.html { redirect_to @services_request, notice: 'ServicesRequest was successfully created.' }
+        format.html { redirect_to @services_request }
         format.json { render :show, status: :created, location: @services_request }
+        format.js {}
       else
         format.html { render :new }
         format.json { render json: @services_request.errors, status: :unprocessable_entity }
@@ -21,11 +21,7 @@ class ServicesRequestsController < ApplicationController
 
   private
 
-  def set_services_request
-    @services_request = ServicesRequest.find(params[:id])
-  end
-
   def services_request_params
-    params[:services_request]
+    params.require(:services_request).permit(:name, :lastname, :phone, :email, :details)
   end
 end
