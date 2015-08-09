@@ -17,9 +17,15 @@ $(document).ready(function(){
     $('#myModal').modal({ show: true });
   }
 
-  function closeModal(){
-    $('#myModal').modal({ show: false });
-  }
+  $('.close-modal-button').click(function(){
+    $('#new_services_request').find('input.form-control').each(function(index, value){
+      $(value).val('');
+    });
+
+    $('#new_services_request').find('textarea.form-control').each(function(index, value){
+      $(value).val('');
+    });
+  });
 
   $('#services_request_phone').blur(function(e) {
     if (validatePhone('services_request_phone')) {
@@ -32,15 +38,6 @@ $(document).ready(function(){
 
   $('.submit-services-request').click(function(){
     openModal();
-
-    $('#new_services_request').find('input.form-control').each(function(index, value){
-      $(value).val('');
-    });
-
-    $('#new_services_request').find('textarea.form-control').each(function(index, value){
-      $(value).val('');
-    });
-
   });
 
 })
